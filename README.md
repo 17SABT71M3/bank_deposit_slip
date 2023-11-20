@@ -13,6 +13,9 @@ Download Dependencies
 - ```python result.py```
 
 
-<br>Disclaimer: This is script to fills and is a Private effort and is not affliated with/to the Banks
 
-Software/Code provided "AS IS" and without ANY WARRANTY/LIABILITY. 
+
+### Usage Terms---
+- This is script to fills and is a Private effort
+- It is not affliated with/to the Banks
+- Code provided "AS IS" and without ANY WARRANTY/LIABILITY. 
