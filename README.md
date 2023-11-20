@@ -14,3 +14,5 @@ Download Dependencies
 
 
 <br>Disclaimer: This is script to fills and is a Private effort and is not affliated with/to the Banks
+
+Software/Code provided "AS IS" and without ANY WARRANTY/LIABILITY. Use at your Own risk
