@@ -21,4 +21,4 @@ Download Dependencies
 ### Usage Terms---
 - This is script to fills and is a Private effort
 - It is not affliated with/to the Banks
-- Code provided "AS IS" and without ANY WARRANTY/LIABILITY. 
+- Code provided "AS IS" and without ANY WARRANTY/LIABILITY See License
