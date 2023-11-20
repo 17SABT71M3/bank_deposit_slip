@@ -7,6 +7,8 @@ Download Dependencies
 - ```winget install python```
 - ```pip install pypdf2```
 - Download all files into a folder.
+
+### How to run--
 - ```Cd C:\PATH\TO\FOLDER```
 - ```python result.py```
 
