@@ -72,6 +72,21 @@ name_data = {
 phone_number_data = {
     'Contact No': ['Contact No']
 }
+account_number1 = {
+    'Account No': ['Account No', 'Account No 4'],
+    'Account No 4': ['Account No 2', 'Account No 5'],
+
+}
+account_number2 = {
+    'Account No 2': ['Account No', 'Account No 4'],
+    'Account No 5': ['Account No 2', 'Account No 5'],
+
+}
+account_number3 = {
+    'Account No 3': ['Account No', 'Account No 4'],
+    'Account No 6': ['Account No 2', 'Account No 5'],
+
+}
 rupees_data = {
     'Rupees Line 1': ['Rupees', 'Text49'],
     'Rupees Line 2': ['Rupees 2', 'Text51'],
@@ -131,6 +146,35 @@ if __name__ == "__main__":
     # Loop through each cheque in the dictionary
     field_names_data_list = [ name_data, rupees_data ]
     while True:
+        input_account = input("Account no: ")
+
+        # Check if the input is empty
+        if input_account == '':
+            break  # Exit the loop if the input is empty
+
+        # Try to convert the input to a float
+        try:
+            numeric_value = int(input_account)
+            break  # Exit the loop if conversion is successful
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+    input_account = str(input_account)
+    input_acc1 = input_account[:4]
+    input_acc2 = input_account[4:7]
+    input_acc3 = input_account[7:14]
+    account_number1['Account No'][0] = input_acc1
+    account_number1['Account No 4'][0] = input_acc1
+    account_number2['Account No 2'][0] = input_acc2
+    account_number2['Account No 5'][0] = input_acc2
+    account_number3['Account No 3'][0] = input_acc3
+    account_number3['Account No 6'][0] = input_acc3
+    for key, values in account_number1.items():
+        result_string += f'"{key}" "{values[0]}" '
+    for key, values in account_number2.items():
+        result_string += f'"{key}" "{values[0]}" '
+    for key, values in account_number3.items():
+        result_string += f'"{key}" "{values[0]}" '
+    while True:
         input_total = input("Total: ")
 
         # Check if the input is empty
@@ -146,7 +190,8 @@ if __name__ == "__main__":
     total_data['Total Amt'][0] = input_total 
     total_data['Total Amt'][1] = input_total  
     result_string += f'"Total" "{input_total}" "Text64" "{input_total}" '
-    more_field_names_list = [ cheque_names_data, cheque_details_data ]
+    more_field_names_list = [ cheque_names_data ]
+    some_more_field_data = [ cheque_details_data ]
     depositor_info_list = [ phone_number_data, depositor_name_data ]
     year_data['Year'] = [current_year, current_year]
     
@@ -175,12 +220,28 @@ if __name__ == "__main__":
                 result_string += f'"{values[1]}" "{user_input}" '
                 data_dict[key][1] = user_input
 
+
+
     
     os.system('cls')
-    input("Get ready..enter the CHEQUE numbers...press a key")
-    os.system('cls')
+    print("Enter Cheque Numbers :")
     input("_________________________________")
     for data_dict in more_field_names_list:
+        for key, values in data_dict.items():
+            # Ask the user to enter a number for the current key
+            user_input = input(f"{key}: ")
+
+            # Append elements to the result_string based on user input
+            if len(values) > 0:
+                result_string += f'"{values[0]}" "{user_input}" '
+                data_dict[key][0] = user_input
+            if len(values) > 1:
+                result_string += f'"{values[1]}" "{user_input}" '
+                data_dict[key][1] = user_input
+    os.system('cls')
+    print("Enter Cheque Details :")
+    input("_________________________________")
+    for data_dict in some_more_field_data:
         for key, values in data_dict.items():
             # Ask the user to enter a number for the current key
             user_input = input(f"{key}: ")
