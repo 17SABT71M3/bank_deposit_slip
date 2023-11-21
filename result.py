@@ -130,8 +130,17 @@ total_data = {
 depositor_name_data = {
     'Depositor Name': ['Depositor Name', 'Name 4']
 }
+city_data = {
 
+    'City': [ 'City' ],
+    'City 2': [ 'City 2' ],
+    'City 3': [ 'City 3' ],
+    'City 4': [ 'City 4' ],
+    'City 5': [ 'City 5' ],
+    'City 6': [ 'City 6' ],
+    'City 7': [ 'City 7' ],
 
+}
 
 
 if __name__ == "__main__":
@@ -215,6 +224,7 @@ if __name__ == "__main__":
     more_field_names_list = [ cheque_names_data ]
     some_more_field_data = [ cheque_details_data ]
     depositor_info_list = [ phone_number_data, depositor_name_data ]
+    cheque_more_field_data = [ city_data ]
     year_data['Year'] = [current_year, current_year]
     
     for key, values in year_data.items():
@@ -275,7 +285,19 @@ if __name__ == "__main__":
             if len(values) > 1:
                 result_string += f'"{values[1]}" "{user_input}" '
                 data_dict[key][1] = user_input
-
+    os.system('cls')
+    input("")
+    for data_dict in cheque_more_field_data:
+        for key, values in data_dict.items():
+            # Ask the user to enter a number for the current key
+            user_input = input(f"{key}: ")
+            # Append elements to the result_string based on user input
+            if len(values) > 0:
+                result_string += f'"{values[0]}" "{user_input}" '
+                data_dict[key][0] = user_input
+            if len(values) > 1:
+                result_string += f'"{values[1]}" "{user_input}" '
+                data_dict[key][1] = user_input
     os.system('cls')
     print("Enter Depositor Details:")
     input("_________________________________")
