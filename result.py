@@ -280,10 +280,10 @@ if __name__ == "__main__":
 
             # Append elements to the result_string based on user input
             if len(values) > 0:
-                result_string += f'"{values[0]}" "{user_input}" '
+                result_string += f'"{values[0]}" "{user_input.upper()}" '
                 data_dict[key][0] = user_input
             if len(values) > 1:
-                result_string += f'"{values[1]}" "{user_input}" '
+                result_string += f'"{values[1]}" "{user_input.upper()}" '
                 data_dict[key][1] = user_input
     os.system('cls')
     input("")
@@ -293,10 +293,10 @@ if __name__ == "__main__":
             user_input = input(f"{key}: ")
             # Append elements to the result_string based on user input
             if len(values) > 0:
-                result_string += f'"{values[0]}" "{user_input}" '
+                result_string += f'"{values[0]}" "{user_input.upper()}" '
                 data_dict[key][0] = user_input
             if len(values) > 1:
-                result_string += f'"{values[1]}" "{user_input}" '
+                result_string += f'"{values[1]}" "{user_input.upper()}" '
                 data_dict[key][1] = user_input
     os.system('cls')
     print("Enter Depositor Details:")
@@ -308,10 +308,10 @@ if __name__ == "__main__":
 
             # Append elements to the result_string based on user input
             if len(values) > 0:
-                result_string += f'"{values[0]}" "{user_input}" '
+                result_string += f'"{values[0]}" "{user_input.upper()}" '
                 data_dict[key][0] = user_input
             if len(values) > 1:
-                result_string += f'"{values[1]}" "{user_input}" '
+                result_string += f'"{values[1]}" "{user_input.upper()}" '
                 data_dict[key][1] = user_input
 
     ob = Solution()
