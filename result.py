@@ -87,6 +87,11 @@ account_number3 = {
     'Account No 6': ['Account No 2', 'Account No 5'],
 
 }
+loan_account_number = {
+    'Loan Account No': ['Account No', 'Account No 4'],
+    'Loan Account No 2': ['Account No 2', 'Account No 5'],
+
+}
 rupees_data = {
     'Rupees Line 1': ['Rupees', 'Text49'],
     'Rupees Line 2': ['Rupees 2', 'Text51'],
@@ -142,7 +147,23 @@ if __name__ == "__main__":
     current_month = current_datetime.month
     current_year = current_datetime.year
 
+    while True:
+        loan_account = input("Loan Account no: ")
 
+        # Check if the input is empty
+        if loan_account == '':
+            break  # Exit the loop if the input is empty
+
+        # Try to convert the input to a float
+        try:
+            numeric_value = int(loan_account)
+            break  # Exit the loop if conversion is successful
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+    loan_account_number['Loan Account No'][0] = loan_account
+    loan_account_number['Loan Account No 2'][0] = loan_account
+    for key, values in loan_account_number.items():
+        result_string += f'"{key}" "{values[0]}" '
     # Loop through each cheque in the dictionary
     field_names_data_list = [ name_data, rupees_data ]
     while True:
@@ -168,6 +189,7 @@ if __name__ == "__main__":
     account_number2['Account No 5'][0] = input_acc2
     account_number3['Account No 3'][0] = input_acc3
     account_number3['Account No 6'][0] = input_acc3
+
     for key, values in account_number1.items():
         result_string += f'"{key}" "{values[0]}" '
     for key, values in account_number2.items():
