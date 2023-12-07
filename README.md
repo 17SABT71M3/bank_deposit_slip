@@ -1,7 +1,7 @@
 
 >[!WARNING]
 >This file has been uploaded to only aid in the electronic filling of bank deposit slips.
-><br>I am not an authorized agent of hdfc or any other bank.
+><br><b>I am not an authorized agent of hdfc or any other bank.</b>
 ><br>Please download the original fill-in pdf form from the hdfc bank's website.
 ><br> The script only automates the process of filling the slips which are in pdf format.
 
