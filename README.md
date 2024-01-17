@@ -1,3 +1,5 @@
+I use this script to fill my bank deposit slips.
+<br>Useful note- The result.py may give incorrect amount in words if amount is greater than 10s of thousands.
 
 >[!WARNING]
 >This file has been uploaded to only aid in the electronic filling of bank deposit slips.
