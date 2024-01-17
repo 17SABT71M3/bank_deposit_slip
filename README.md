@@ -30,3 +30,4 @@ Download Dependencies
 - It is a Private effort
 - It is not affliated with/to the Banks
 - Code provided "AS IS" and without ANY WARRANTY/LIABILITY See License
+- Use at your own RISK!
