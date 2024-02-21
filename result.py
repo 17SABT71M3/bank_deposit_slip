@@ -3,46 +3,31 @@ from pydone import fill_pdf
 import shlex
 from datetime import datetime
 import os
-import random
 
-class Solution(object):
-    less_than_20 = ["", "One", "Two", "Three", "Four", "Five", "Six",
-                    "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen",
-                    "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen",
-                    "Nineteen"]
-    tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty",
-            "Seventy", "Eighty", "Ninety"]
-    thousands = ["", "Thousand", "Million", "Billion"]
 
-    def numberToWords(self, numz):
-        something = len(str(numz))
-        if numz == 0:
-            return "zero"
-        ans = ""
-        i = 0
-        while numz > 0:
-            if numz % 1000 != 0:
-                ans = self.helper(numz % 1000) + Solution.thousands[i] + " " + ans
-                numz //= 1000
-            i += 1
-            if numz % 1000 == 0 and i == 1 and something > 3:
-                numet = numz // 1000
-                ans = self.helper(numet) + Solution.thousands[i] + " " + ans
-                break    
-        return ans.strip()
+# NUMBERS TO WORDS CONVERSION IN PYTHON (INDIAN NUMBER SYSTEM)
 
-    def helper(self, x):
-        if x == 0:
-            return ""
-        elif x < 20:
-            return Solution.less_than_20[x] + " "
-        elif x < 100:
-            return Solution.tens[x // 10] + " " + self.helper(x % 10)
-        else:
-            if x % 100 != 0:
-                return Solution.less_than_20[x // 100] + " Hundred and " + self.helper(x % 100)
-            else:
-                return Solution.less_than_20[x // 100] + " Hundred " + self.helper(x % 100)
+def words(n):
+    units = ['Zero', 'One','Two','Three','Four','Five','Six','Seven','Eight','Nine']
+    teens = ['Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Ninteen']
+    tens = ['Twenty','Thirty','Fourty','Fifty','Sixty','Seventy','Eighty','Ninety']
+    if n>=0 and n<=9:
+        return units[n]
+    elif n>=10 and n<=19:
+        return teens[n-10]
+    elif n>=20 and n<=99:
+        return tens[(n//10)-2] + " " + (units[n%10] if n%10!=0 else "")
+    elif n>=100 and n<=999:
+        return units[n//100] + " Hundred " + (words(n%100) if n%100!=0 else "")
+    elif n>=1000 and n<=99999:
+        return words(n//1000) + " Thousand " + (words(n%1000) if n%1000!=0 else "")
+    elif n>=100000 and n<=9999999:
+        return words(n//100000) + " Lakh "+(words(n%100000) if n%100000!=0 else "") 
+    elif n>=10000000 and n<=99999999999:
+        return words(n//10000000) + " Crore " + (words(n%10000000) if n%10000000!=0 else "")
+    else:
+        return 'Provide a valid number from one digit to eleven digits.'
+    
 
 # Sample field_names_data dictionary
 cheque_names_data = {
@@ -314,7 +299,6 @@ if __name__ == "__main__":
                 result_string += f'"{values[1]}" "{user_input.upper()}" '
                 data_dict[key][1] = user_input
 
-    ob = Solution()
 
   
     if 'Total Amt' in total_data:
@@ -323,16 +307,11 @@ if __name__ == "__main__":
         if total_amt_value != '':
             total_amt_value = int(total_amt_value)
 
-            result = ob.numberToWords(total_amt_value)
+            result = words(total_amt_value)
             result_string += f'"{total_in_words_data["Rupees In Words"][0]}" "{result} only" '
             result_string += f'"{total_in_words_data["Rupees In Words"][1]}" "{result} only" '
-    
-    
-
-    random_number = random.randint(1000, 9999)
-    output_file_name = "output_hdfc_bank_slip" + str(random_number) + ".pdf"
 
     field_data_dict = create_field_data_dict(result_string)
     # Print the final result_string
-    print("result stored in " + output_file_name)
-    fill_pdf('example.pdf',output_file_name,field_data_dict)
+    print("result stored in output_hdfc_bank_slip39012.pdf")
+    fill_pdf('example.pdf','output_hdfc_bank_slip39012.pdf',field_data_dict)
