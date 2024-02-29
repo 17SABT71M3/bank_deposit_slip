@@ -4,8 +4,8 @@ I use this script to fill my bank deposit slips.
 
 >[!WARNING]
 >This file has been uploaded to only aid in the electronic filling of bank deposit slips.
->- I am not an authorized on behalf of HDFC or any other bank.</b>
->- I am not an affliation or affliated with the banks in any kind/way.
+>- I am not an authorized on behalf of HDFC to make this script.</b>
+>- I do not have any affliation or affliated with any banks in any way!
 >  
 ><br>Please download the original fill-in pdf form from concerned bank's websites.
 ><br> The script can only automate the process of filling the slips which are in pdf documents.
