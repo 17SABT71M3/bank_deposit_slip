@@ -31,6 +31,4 @@ Download Dependencies
 ### Usage Terms---
 - This is script fills the PDFs
 - It is a Private effort
-- It is not affliated with/to the Banks
 - Code provided "AS IS" and without ANY WARRANTY/LIABILITY See License
-- Use at your own RISK!
