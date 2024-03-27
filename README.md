@@ -1,9 +1,9 @@
 I use this script to fill my bank deposit slips.
 
 
->[Read before Proceeding any further]
 >[!WARNING] 
->This file has been uploaded to only aid in the electronic filling of bank deposit slips.
+>  ###   `Read before Proceeding any further`
+> <br> This file has been uploaded to only aid in the electronic filling of bank deposit slips.
 >- I am not an authorized on behalf of HDFC to make this script.</b>
 >- I do not have any affliation or affliated with any banks in any way!
 >- Third-Party Code! Ahead!
