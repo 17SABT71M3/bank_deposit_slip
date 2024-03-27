@@ -22,6 +22,7 @@ Download Dependencies
 - Download all files into a folder.
 
 ### How to run--
+- Open `COMMAND PROMPT`
 - ```Cd C:\PATH\TO\FOLDER\CONTAINING\RESULT.PY\```
 - ```python result.py```
 
