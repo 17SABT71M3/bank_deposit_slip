@@ -10,7 +10,7 @@ I use this script to fill my bank deposit slips.
 >- Use At your Own Risk/Good Discretion
 >  
 ><br>Please download the original fill-in pdf form from concerned bank's websites.
-><br> The script can only automate the process of filling the slips which are in pdf documents.
+><br> The script can only automate the process of filling the slips which are pdf documents.
 
 
 ### Instructions--
