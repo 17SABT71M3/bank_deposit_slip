@@ -14,12 +14,12 @@ I use this script to fill my bank deposit slips.
 
 
 ### Instructions--
-Download Dependencies
+Install `PYTHON`
 
 - Open Command Prompt.
 - ```winget install python```
 - ```pip install pypdf2```
-- Download all files into a folder.
+- Download all files (download and extract ZIP) into a folder / use `git` command to clone repository
 
 ### How to run--
 - Open `COMMAND PROMPT`
