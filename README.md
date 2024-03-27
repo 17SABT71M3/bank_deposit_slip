@@ -19,7 +19,7 @@ Install `PYTHON`
 - Open Command Prompt.
 - ```winget install python```
 - ```pip install pypdf2```
-- Download all files (download and extract ZIP) into a folder / use `git` command to clone repository
+- Download all files (download and extract ZIP) Use the Green <CODE> button and Click on Download Zip / use `git` command to clone repository
 
 ### How to run--
 - Open `COMMAND PROMPT`
