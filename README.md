@@ -22,7 +22,7 @@ Download Dependencies
 - Download all files into a folder.
 
 ### How to run--
-- ```Cd C:\PATH\TO\FOLDER```
+- ```Cd C:\PATH\TO\FOLDER\CONTAINING\RESULT.PY\```
 - ```python result.py```
 
 
